@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home page sections — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Home page sections</h1>
+<p>Add a section with <strong>Add section</strong> in the theme editor. These sections work on the home page and on any other page template. Most of them fill themselves with your products and collections until you choose specific ones, so a new store never shows empty boxes.</p>
+<p>Every section below has a <strong>Color scheme</strong> setting. See <a href="theme-settings.html">Theme settings</a> for color schemes.</p>
+<h2 id="image-banner">Image banner</h2>
+<p>The first screen of the home page: a large heading, an image, and a short introduction to one product.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Layout</strong></td><td><strong>Image beside text</strong>, <strong>Text over image</strong>, <strong>Text only</strong>, or <strong>Two pages</strong> (text on a left page, image and product on a right page).</td></tr><tr><td><strong>Panel color scheme</strong></td><td>The panel behind the text, used with <strong>Text over image</strong>.</td></tr><tr><td><strong>Heading</strong></td><td>Leave blank to use the store name.</td></tr><tr><td><strong>Heading size</strong></td><td><strong>Medium</strong>, <strong>Large</strong>, or <strong>Extra large</strong>.</td></tr><tr><td><strong>Text</strong></td><td>A short introduction.</td></tr><tr><td><strong>Image</strong></td><td>Leave blank to use the first image of the product in the <strong>Product</strong> block.</td></tr><tr><td><strong>Image ratio</strong> and <strong>Image ratio on mobile</strong></td><td>Frame shape on large and small screens.</td></tr><tr><td><strong>Image caption</strong></td><td>Optional caption under the image.</td></tr></tbody></table></div>
+<p>Blocks:</p>
+<ul><li><strong>Small text</strong> (up to 3): short lines above the heading, such as &quot;Small batch&quot;, &quot;Ships Monday to Friday&quot;.</li><li><strong>Product</strong>: a summary of one product with a link to its page. Leave the product blank to use the first product with an image. The banner has no Add to cart button.</li><li><strong>Buttons</strong>: <strong>First button label</strong>, <strong>First button link</strong>, <strong>Second button label</strong>, <strong>Second button link</strong>.</li><li><strong>Plan example</strong>: shows how a delivery plan works for one product: plan price, regular price, and how often it arrives. <strong>Heading</strong>, <strong>Text</strong>, <strong>Product</strong> (blank uses the product above). Shown only when the product has delivery plans. No calendar dates are used.</li><li><strong>Shipping schedule</strong>: your shipping days and next ship date. See <a href="delivery-plans.html">Delivery plans and dates</a>.</li></ul>
+<h2 id="product-list">Product list</h2>
+<p>A price list of your products, grouped by collection. Each row has a small image, the name, a dotted line, and the price.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong></td><td>Section heading.</td></tr><tr><td><strong>Layout</strong></td><td><strong>List</strong> shows groups one after another. <strong>Two pages</strong> shows two groups side by side like an open book.</td></tr></tbody></table></div>
+<p>Blocks:</p>
+<ul><li><strong>Collection</strong> (up to 6): one group. <strong>Collection</strong>, <strong>Subheading</strong> (start with a number, such as &quot;6–10 am&quot;, to show the number large), <strong>Products</strong> (leave blank to use the collection's products), and <strong>Color scheme</strong> for the group's band.</li><li><strong>Specifications</strong> (up to 2): a short table of name and value rows, placed after the group before it. <strong>Heading</strong> and <strong>Rows</strong> (one row per line, with the name and value separated by a colon).</li></ul>
+<p>With no collection chosen, products are grouped by collection, or by product type with <strong>Two pages</strong>.</p>
+<h2 id="featured-products">Featured products</h2>
+<p>Products from one collection.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong> and <strong>Text</strong></td><td>Section heading and introduction.</td></tr><tr><td><strong>Collection</strong></td><td>Leave blank to show every product.</td></tr><tr><td><strong>Link label</strong></td><td>Links to the collection. Leave blank to hide the link.</td></tr><tr><td><strong>Number of products</strong></td><td>From 2 to 12.</td></tr><tr><td><strong>Columns on desktop</strong></td><td>From 2 to 4.</td></tr><tr><td><strong>Card size</strong></td><td><strong>Standard</strong> or <strong>Large</strong>.</td></tr><tr><td><strong>Image ratio</strong></td><td><strong>Square</strong>, <strong>Portrait</strong>, or <strong>Landscape</strong>.</td></tr><tr><td><strong>Layout</strong></td><td><strong>Grid</strong> of cards, <strong>Menu</strong> (one row per product with a large image, like a menu), or <strong>Grouped by date</strong> (by <code>custom.made_on</code>, newest first).</td></tr><tr><td><strong>Date label</strong></td><td>Shown before each date with <strong>Grouped by date</strong>.</td></tr><tr><td><strong>Heading for other products</strong></td><td>Heading for products outside the main rows. Leave blank to use &quot;More products&quot;.</td></tr></tbody></table></div>
+<p>Block: <strong>Variant filter</strong>. Enter an <strong>Option name</strong>, such as &quot;Dog size&quot;, to show a choice above the products. Picking a value changes the variant shown on every card. It does not hide products.</p>
+<h2 id="delivery-plan-timeline">Delivery plan timeline</h2>
+<p>One product with delivery plans, its photo, and the same timeline marks as the product page's Timeline layout: &quot;Ships about Oct 19&quot; (from your shipping days), &quot;Box 2 ships about Day 30&quot;, &quot;Runs out about Day 30&quot; (from <code>custom.days_of_supply</code>) and &quot;Then every month&quot;. Customers can pick a delivery rhythm to see the marks change; this choice is only for viewing and doesn't add anything to the cart. Later deliveries are shown relative to the first, never as a date. Used by the Kennel preset.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Product</strong></td><td>Leave blank to use the first product with delivery plans.</td></tr><tr><td><strong>Heading</strong></td><td>Leave blank to use &quot;How a delivery plan runs&quot;.</td></tr><tr><td><strong>Text</strong></td><td>Optional text under the heading.</td></tr><tr><td><strong>Color scheme</strong></td><td>Colors for the section.</td></tr></tbody></table></div>
+<p>The section is hidden when the product has no delivery plan with a frequency the theme can read.</p>
+<h2 id="featured-collections">Featured collections</h2>
+<p>Two to four collections side by side, each with a few of its products.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong></td><td>Section heading.</td></tr></tbody></table></div>
+<p>Blocks:</p>
+<ul><li><strong>Collection</strong> (up to 4): <strong>Collection</strong>, <strong>Subheading</strong>, <strong>Products</strong> (leave blank to use the collection's products), <strong>Color scheme</strong>.</li><li><strong>Note</strong> (up to 2): a column of text, such as a delivery note. <strong>Heading</strong>, <strong>Text</strong>, <strong>Color scheme</strong>.</li></ul>
+<p>With no collection chosen, the first three collections with products are shown.</p>
+<h2 id="product-gallery">Product gallery</h2>
+<p>Large photos of one product, or your own images.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong> and <strong>Text</strong></td><td>Section heading and a short line next to it.</td></tr><tr><td><strong>Product</strong></td><td>Leave blank to use the first product with images.</td></tr><tr><td><strong>Link label</strong></td><td>Links to the product page. Leave blank to use &quot;View product&quot;.</td></tr><tr><td><strong>Layout</strong></td><td><strong>Row</strong> of three or four images, or <strong>One large image</strong> beside two smaller ones.</td></tr><tr><td><strong>Image ratio</strong></td><td><strong>Square</strong>, <strong>Portrait</strong>, or <strong>Landscape</strong>.</td></tr></tbody></table></div>
+<p>Block: <strong>Image</strong>, with <strong>Image</strong> and <strong>Image caption</strong> (blank uses the image alt text). Add Image blocks to show your own photos. Without them, the section uses the product's images: products with 4 or more images skip the first one, and each image's alt text becomes its caption.</p>
+<h2 id="image-with-text">Image with text</h2>
+<p>An image beside text.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong> and <strong>Heading size</strong></td><td>Section heading.</td></tr><tr><td><strong>Image</strong> and <strong>Image caption</strong></td><td>The image and an optional caption.</td></tr><tr><td><strong>Image position</strong></td><td><strong>Left</strong> or <strong>Right</strong>.</td></tr><tr><td><strong>Image ratio</strong></td><td><strong>Square</strong>, <strong>Portrait</strong>, or <strong>Landscape</strong>.</td></tr><tr><td><strong>Extend image to the page edge</strong></td><td>Lets the image run to the edge of the screen.</td></tr></tbody></table></div>
+<p>Blocks: <strong>Text</strong>, <strong>Buttons</strong>, <strong>Specifications</strong>, and <strong>Shipping schedule</strong>.</p>
+<h2 id="rich-text">Rich text</h2>
+<p>Text on its own, such as a short brand story. Blocks: <strong>Text</strong> and <strong>Buttons</strong>.</p>
+<h2 id="blog-posts">Blog posts</h2>
+<p>Your latest blog posts.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong></td><td>Section heading.</td></tr><tr><td><strong>Blog</strong></td><td>Leave blank to use the News blog.</td></tr><tr><td><strong>Number of posts</strong></td><td>From 2 to 6.</td></tr><tr><td><strong>Layout</strong></td><td><strong>Cards</strong> with images, or a <strong>List</strong>.</td></tr></tbody></table></div>
+<h2 id="faq">FAQ</h2>
+<p>Questions and answers that open and close. Used on the contact page, and can be added to any page.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong></td><td>Read by screen readers. Group headings show on the page.</td></tr><tr><td><strong>Layout</strong></td><td><strong>Stacked</strong>, or <strong>Headings in the margin</strong> to put group headings in a left column on desktop.</td></tr><tr><td><strong>Open the first answer</strong></td><td>Opens the first question when the page loads.</td></tr><tr><td><strong>Image</strong>, <strong>Image caption</strong>, <strong>Link label</strong>, <strong>Link</strong></td><td>An optional image beside the questions. Without an image, the questions use the full width and the caption and link show as a note below them.</td></tr></tbody></table></div>
+<p>Blocks: <strong>Question group</strong> (<strong>Heading</strong>) starts a new group. <strong>Question</strong> (<strong>Question</strong> and <strong>Answer</strong>) belongs to the group above it.</p>
+<h2 id="contact-form">Contact form</h2>
+<p>A contact form with name, email, and message fields. Messages are sent to your store's contact email.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong> and <strong>Text</strong></td><td>Above the form.</td></tr><tr><td><strong>Show phone number field</strong></td><td>Adds an optional phone field.</td></tr><tr><td><strong>Layout</strong></td><td><strong>Stacked</strong> or <strong>Headings in the margin</strong>.</td></tr></tbody></table></div>
+<p>Blocks, up to two, in the column beside the form:</p>
+<ul><li><strong>Text</strong> (<strong>Heading</strong> and <strong>Text</strong>), such as what to include in a message. A blank heading shows your store name.</li><li><strong>Specifications</strong> (<strong>Heading</strong> and <strong>Rows</strong>), such as reply hours. Write one row per paragraph or line, with the name and value separated by a colon, for example &quot;Monday to Friday: 9:00 am – 5:00 pm&quot;.</li></ul>
+<h2 id="custom-liquid">Custom Liquid</h2>
+<p>Add your own Liquid, HTML, or app snippets with the <strong>Custom Liquid</strong> setting. For advanced use.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

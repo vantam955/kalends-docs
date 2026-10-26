@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog, pages, and other templates — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Blog, pages, and other templates</h1>
+<h2 id="blog">Blog</h2>
+<p>The <strong>Blog</strong> section lists your posts. The first post on the first page is shown large. Each post shows its date, topic (its first tag), reading time, author, number of comments, title, summary, and featured image.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Layout</strong></td><td><strong>Stacked</strong>, or <strong>Headings in the margin</strong> to put month names in a left column on desktop.</td></tr><tr><td><strong>Text</strong></td><td>Shown under the blog title.</td></tr><tr><td><strong>Group posts by month</strong></td><td>Adds a month heading between posts.</td></tr><tr><td><strong>Show featured images</strong></td><td>Shows each post's featured image.</td></tr><tr><td><strong>Posts per page</strong></td><td>From 6 to 24.</td></tr></tbody></table></div>
+<p>Tags you add to posts appear as topics at the top of the blog, so customers can browse by topic.</p>
+<h2 id="article">Article</h2>
+<p>The <strong>Article</strong> section shows the post with its date, author, topics, reading time, featured image (with its alt text as the caption), and content.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Layout</strong></td><td><strong>Stacked</strong>, or <strong>Headings in the margin</strong> to put the title and date in a column beside the image on desktop.</td></tr><tr><td><strong>Products in this post</strong></td><td>Products shown next to the post. Connect a metafield to show different products on each post.</td></tr></tbody></table></div>
+<p>To show different products on each post, create a blog post metafield of the Product type with the list option (in <strong>Settings &gt; Custom data</strong>), fill it in on each post, and connect <strong>Products in this post</strong> to it. See <a href="metafields.html">Product metafields</a>.</p>
+<p>Comments follow the settings of each blog in <strong>Online Store &gt; Blog posts &gt; Manage comments</strong>. When comments need approval, customers see a message that their comment is waiting for review.</p>
+<h2 id="pages">Pages</h2>
+<p>The <strong>Default page</strong> template shows the page title and content. The <strong>Page</strong> section has these settings, all optional:</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Layout</strong></td><td><strong>Stacked</strong>, or <strong>Headings in the margin</strong> to put the headings of your page content in a left column on desktop and set quotes as pull quotes.</td></tr><tr><td><strong>Image</strong></td><td>A portrait image beside the content on desktop, and under the title on mobile.</td></tr><tr><td><strong>Image caption</strong></td><td>A line under the image.</td></tr><tr><td><strong>Sign-off</strong></td><td>A line under the content, such as the names of the people behind the shop.</td></tr><tr><td><strong>Sign-off detail</strong></td><td>A second, smaller line under the sign-off.</td></tr></tbody></table></div>
+<h3 id="contact-page">Contact page</h3>
+<p>The <code>contact</code> template has three sections: the page content, an <strong>FAQ</strong>, and a <strong>Contact form</strong>. To use it:</p>
+<ol><li>In your Shopify admin, go to <strong>Online Store &gt; Pages</strong> and create a page, such as &quot;Help&quot;.</li><li>Under <strong>Theme template</strong>, choose <code>contact</code>.</li><li>In the theme editor, open the page template and edit the questions and the text beside the form.</li></ol>
+<p>See <a href="sections.html">Home page sections</a> for the <strong>FAQ</strong> and <strong>Contact form</strong> settings.</p>
+<h2 id="404-page">404 page</h2>
+<p>Shown when a page doesn't exist. It has a search box, a link to the home page, and a few collections.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong> and <strong>Text</strong></td><td>The message.</td></tr><tr><td><strong>Show collections</strong></td><td>Shows up to three collections that have products.</td></tr><tr><td><strong>Collections</strong></td><td>Leave blank to show the first three collections that have products.</td></tr></tbody></table></div>
+<p>The Kennel and Soot presets add a <strong>Featured products</strong> section below.</p>
+<h2 id="password-page">Password page</h2>
+<p>Shown while your store is password protected. It has your logo or store name, a heading, your password page message, an email signup form, and a link to enter the store with the password.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading</strong></td><td>Large heading, such as &quot;Opening soon&quot;.</td></tr><tr><td><strong>Image</strong> and <strong>Image position</strong></td><td>An optional image on the <strong>Left</strong> or <strong>Right</strong>.</td></tr></tbody></table></div>
+<p>The text under the heading is the password page message in <strong>Online Store &gt; Preferences</strong>.</p>
+<h2 id="gift-card-page">Gift card page</h2>
+<p>Customers who receive a gift card open this page from their email. It shows the balance, the code, a QR code, an Apple Wallet button on supported devices, and buttons to copy the code and print the card. Expired or used cards say so and hide the code.</p>
+<p>Choose the card's colors with <strong>Theme settings &gt; Colors &gt; Gift card color scheme</strong>.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

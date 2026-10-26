@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theme settings — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Theme settings</h1>
+<p>Open the theme editor and click the gear icon to see <strong>Theme settings</strong>. These settings apply to the whole store. Section and block settings are described on the other pages of this documentation.</p>
+<h2 id="logo">Logo</h2>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Logo</strong></td><td>Shown in the header and on the password page. Without a logo, the store name is shown in the heading font.</td></tr><tr><td><strong>Logo width</strong></td><td>Width on screens 1024px and wider, from 80 to 320px.</td></tr><tr><td><strong>Logo width on mobile</strong></td><td>Width on smaller screens, from 60 to 200px.</td></tr><tr><td><strong>Favicon</strong></td><td>The small icon in browser tabs. 32 x 32px .png recommended.</td></tr></tbody></table></div>
+<h2 id="typography">Typography</h2>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Heading font</strong></td><td>Font for headings and product titles. Choose from Shopify's font library.</td></tr><tr><td><strong>Body font</strong></td><td>Font for paragraphs, descriptions, and form fields.</td></tr><tr><td><strong>Font for navigation, buttons and prices</strong></td><td>Choose <strong>Heading font</strong> or <strong>Body font</strong> for menus, buttons, prices, and other small interface text.</td></tr><tr><td><strong>Heading size scale</strong></td><td>Makes headings larger, from 100% to 150%. Body text stays the same.</td></tr><tr><td><strong>Body text size scale</strong></td><td>Makes body text larger, from 100% to 130%.</td></tr></tbody></table></div>
+<p>Each preset sets these to match its design. See <a href="presets.html">Choose a preset</a>.</p>
+<h2 id="colors">Colors</h2>
+<h3 id="color-schemes">Color schemes</h3>
+<p>A color scheme is a set of colors that a section uses together. Each preset comes with four schemes. You can edit them, or add more with <strong>Add scheme</strong>. Every section and some blocks have a <strong>Color scheme</strong> setting that picks one of them, so editing a scheme updates every place that uses it.</p>
+<p>Each scheme has these colors:</p>
+<div class="table"><table><thead><tr><th>Color</th><th>Used for</th></tr></thead><tbody><tr><td><strong>Background</strong></td><td>Section background.</td></tr><tr><td><strong>Text</strong></td><td>Headings, body text, links, icons, and thin lines that need to stand out, such as the ruler on product cards.</td></tr><tr><td><strong>Secondary text</strong></td><td>Prices you compare against, captions, dates, and other quieter text.</td></tr><tr><td><strong>Lines</strong></td><td>Dividers, borders, and the dotted lines between names and prices.</td></tr><tr><td><strong>Selected row</strong></td><td>Background of the selected purchase option, the highlighted search suggestion, disabled buttons, and the frame behind product images when a product has no <code>custom.label_color</code> metafield.</td></tr><tr><td><strong>Delivery date text</strong></td><td>The ship date line under the purchase options on the product page.</td></tr><tr><td><strong>Button</strong></td><td>Primary button background.</td></tr><tr><td><strong>Button label</strong></td><td>Text on primary buttons.</td></tr></tbody></table></div>
+<p>Secondary buttons use the scheme's <strong>Background</strong> and <strong>Text</strong> colors with a text-colored border.</p>
+<p>Keep enough contrast between <strong>Background</strong> and <strong>Text</strong>, and between <strong>Button</strong> and <strong>Button label</strong>. The theme does not change colors you choose.</p>
+<h3 id="gift-card-color-scheme">Gift card color scheme</h3>
+<p><strong>Gift card color scheme</strong> sets the colors of the printed card on the gift card page that customers receive by email.</p>
+<h2 id="style">Style</h2>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Corner radius</strong></td><td>Rounds buttons, option buttons, inputs, and images, from 0 to 16px. Lines, plan options, and section backgrounds stay square.</td></tr><tr><td><strong>Days of supply on product cards</strong></td><td>How cards show the <code>custom.days_of_supply</code> metafield: <strong>Ruler</strong> (a short ruler with the number of days), <strong>Sentence</strong> (&quot;Lasts about 30 days.&quot;), or <strong>Hidden</strong>. The same choice applies to cart lines.</td></tr></tbody></table></div>
+<p>With <strong>Sentence</strong>, the line can start with the pack size, such as &quot;6 kg bag.&quot;, when the variant has a unit price measurement and <strong>Shipment name</strong> is Box or Bag. When the product has a &quot;Dog size&quot; option, the sentence names the size: &quot;Lasts a medium dog about 24 days.&quot;</p>
+<h2 id="delivery-dates">Delivery dates</h2>
+<p>These settings turn on the ship dates shown on product pages, in the cart, and in the header. Read <a href="delivery-plans.html">Delivery plans and dates</a> for the full picture.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Shipping days</strong></td><td>Check each day of the week you ship orders: <strong>Monday</strong> to <strong>Sunday</strong>. Ship dates appear only after you check at least one day.</td></tr><tr><td><strong>Same-day cutoff</strong></td><td>Orders placed before this time, in your store's time zone, ship the same day. Choose a time from 9:00 am to 6:00 pm, or <strong>No same-day shipping</strong>.</td></tr><tr><td><strong>Shipment name</strong></td><td>The word used for one shipment: <strong>Box</strong>, <strong>Bag</strong>, or <strong>Delivery</strong>. For example, &quot;First box ships about Oct 14&quot;.</td></tr><tr><td><strong>Delivery frequencies</strong></td><td>One plan per line, such as <code>Deliver every month = 1 month</code>. Use it only when the theme can't read a plan's frequency from its name.</td></tr></tbody></table></div>
+<p>Match these days to your shipping settings in <strong>Settings &gt; Shipping and delivery</strong>. Dates are estimates shown to customers. They don't change orders, shipping rates, or checkout.</p>
+<h2 id="cart">Cart</h2>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Cart type</strong></td><td><strong>Drawer</strong> opens a panel over the current page when a customer adds a product. <strong>Page</strong> goes to the cart page.</td></tr><tr><td><strong>Show cart note</strong></td><td>Lets customers add a note to their order.</td></tr></tbody></table></div>
+<h2 id="social-media">Social media</h2>
+<p>Enter the full address of each account under <strong>Social media accounts</strong>: <strong>Facebook</strong>, <strong>Instagram</strong>, <strong>TikTok</strong>, <strong>Pinterest</strong>, <strong>YouTube</strong>, <strong>X (Twitter)</strong>, and <strong>Threads</strong>. Icons appear in the footer only for accounts with an address.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

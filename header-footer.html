@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Header and footer — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Header and footer</h1>
+<h2 id="header">Header</h2>
+<p>In the theme editor, select <strong>Header</strong> at the top of the page list.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Menu</strong></td><td>The menu shown in the header. Default: Main menu.</td></tr><tr><td><strong>Customer account menu</strong></td><td>Links in the account panel that opens from the account icon. Default: Customer account main menu.</td></tr><tr><td><strong>Layout</strong></td><td><strong>Two rows</strong>, <strong>One row</strong>, or <strong>Centered</strong>. Applies on screens 1024px and wider. On smaller screens, navigation opens from the menu button.</td></tr><tr><td><strong>Color scheme</strong></td><td>Colors of the header, its menu panels, and the search box.</td></tr></tbody></table></div>
+<p>The logo and its width are set in <strong>Theme settings &gt; Logo</strong>. Without a logo, the store name is shown in the heading font.</p>
+<h3 id="menu">Menu</h3>
+<ul><li>Create and edit menus in <strong>Online Store &gt; Navigation</strong>. Menus can have up to three levels.</li><li>On screens 1024px and wider, top-level items show in one line. An item with a submenu opens a full-width panel: second-level items become column headings and third-level items are listed below them. When the items don't fit on one line, the last ones move into a &quot;More&quot; item.</li><li>On smaller screens, the menu opens from the menu button.</li></ul>
+<h3 id="search-account-and-cart">Search, account, and cart</h3>
+<ul><li>The search icon suggests products, collections, pages, and blog posts as customers type. Pressing Enter opens the search page.</li><li>The account icon appears when customer accounts are turned on in <strong>Settings &gt; Customer accounts</strong>. It uses Shopify's account panel, so customers can sign in without leaving the page.</li><li>The cart icon shows the number of items and opens the cart drawer or the cart page, depending on <strong>Theme settings &gt; Cart &gt; Cart type</strong>.</li></ul>
+<p>When the cart has an item on a delivery plan and you have set shipping days, the header also shows &quot;First box ships about Oct 14&quot;, linking to the cart summary. See <a href="delivery-plans.html">Delivery plans and dates</a>.</p>
+<h3 id="when-customers-scroll">When customers scroll</h3>
+<p>The header stays at the top of the screen. While scrolling, it shrinks to one compact row so it takes less space. This is built in and has no setting.</p>
+<h2 id="footer">Footer</h2>
+<p>Select <strong>Footer</strong> at the bottom of the page list.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Color scheme</strong></td><td>Footer colors. Every preset uses a dark scheme by default.</td></tr><tr><td><strong>Show country/region selector</strong></td><td>Shown when your store sells in more than one country. Add countries in <strong>Settings &gt; Markets</strong>.</td></tr><tr><td><strong>Show language selector</strong></td><td>Shown when your store has more than one language. Add languages in <strong>Settings &gt; Languages</strong>.</td></tr><tr><td><strong>Show Follow on Shop</strong></td><td>The Follow on Shop button. Requires the Shop sales channel.</td></tr><tr><td><strong>Show payment icons</strong></td><td>Icons for the payment methods enabled on your store.</td></tr></tbody></table></div>
+<p>Social media icons appear for the accounts you add in <strong>Theme settings &gt; Social media</strong>.</p>
+<h3 id="footer-blocks">Footer blocks</h3>
+<p>Add, remove, and reorder blocks:</p>
+<ul><li><strong>Email signup</strong> (one per footer): <strong>Heading</strong> and <strong>Text</strong>. Customers who sign up are added to your customer list with email marketing consent.</li><li><strong>Menu</strong>: <strong>Heading</strong> and <strong>Menu</strong>. Pick any menu from <strong>Online Store &gt; Navigation</strong>.</li><li><strong>Text</strong>: <strong>Heading</strong> and <strong>Text</strong>, for a short description of your store.</li><li><strong>Shipping schedule</strong> (one per footer): your shipping days, with an optional next ship date. Hidden until you choose at least one shipping day. See <a href="delivery-plans.html">Delivery plans and dates</a>.</li></ul>
+<p>The bottom line shows the copyright with your store name, the &quot;Powered by Shopify&quot; link, links to your store policies, and the payment icons.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collections, search, and cart — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Collections, search, and cart</h1>
+<h2 id="collection-page">Collection page</h2>
+<p>In the theme editor, choose <strong>Collections &gt; Default collection</strong> and select the <strong>Collection</strong> section. The page shows the collection title, description, and image, then the products.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Layout</strong></td><td><strong>Grid</strong>, <strong>Groups in the margin</strong>, or <strong>Grouped by date</strong>. See &quot;Product groups&quot; below.</td></tr><tr><td><strong>Products per page</strong></td><td>From 8 to 48. More products load with a &quot;Load more&quot; link.</td></tr><tr><td><strong>Columns on desktop</strong></td><td>From 2 to 4.</td></tr><tr><td><strong>Columns on mobile</strong></td><td><strong>1 column</strong> or <strong>2 columns</strong>.</td></tr><tr><td><strong>Card size</strong></td><td><strong>Standard</strong>, <strong>Large</strong>, or <strong>Large for the newest group</strong>.</td></tr><tr><td><strong>Image ratio</strong></td><td><strong>Portrait</strong>, <strong>Square</strong>, or <strong>Landscape</strong>.</td></tr><tr><td><strong>Enable filtering</strong></td><td>Shows the filters you set up in the <strong>Search &amp; Discovery</strong> app.</td></tr><tr><td><strong>Enable sorting</strong></td><td>Shows the sort menu.</td></tr><tr><td><strong>Filter layout</strong></td><td><strong>Sidebar</strong> or <strong>Horizontal</strong>. With <strong>Groups in the margin</strong>, filters are always horizontal.</td></tr><tr><td><strong>Date label</strong></td><td>With <strong>Grouped by date</strong>, the word before each date, such as &quot;Roasted&quot;. Leave blank to use &quot;Made on&quot;.</td></tr><tr><td><strong>Heading for other products</strong></td><td>Heading for products that fit no group. Leave blank to use &quot;Other products&quot;.</td></tr></tbody></table></div>
+<h3 id="product-cards">Product cards</h3>
+<p>Each card is one link to the product: the image on a frame tinted with the product's color, how long the product lasts (see <strong>Days of supply on product cards</strong>), the title, the price, and the plan price when the product has delivery plans. Cards show compare-at prices, &quot;Sold out&quot;, and unit prices. When a product has <code>custom.facts</code> or <code>custom.notes</code>, they show under the title. Cards have no badges or buttons.</p>
+<h3 id="product-groups">Product groups</h3>
+<p>The collection page can split products into groups, each with its own heading. Groups show only when:</p>
+<ul><li>the collection is sorted manually (or the customer has not chosen a sort order),</li><li>no filter is applied,</li><li>and every product fits on one page.</li></ul>
+<p>Otherwise, the page shows a plain grid. Where products come from:</p>
+<ol><li><strong>Product group</strong> blocks (up to 8). Enter a <strong>Product tag</strong>: products with that tag form the group. Add a <strong>Heading</strong>, a <strong>Subheading</strong> (start it with a number, such as &quot;6–10 am&quot;, to show the number large), a <strong>Group note</strong>, and a <strong>Color scheme</strong> for the group's band. A product goes into the first group whose tag it has.</li><li>Without matching tags, <strong>Grouped by date</strong> groups products by <code>custom.made_on</code>, newest first.</li><li>Otherwise, products are grouped by product type.</li></ol>
+<p>Products that fit no group are listed last, under <strong>Heading for other products</strong>.</p>
+<h3 id="variant-filter">Variant filter</h3>
+<p>Add the <strong>Variant filter</strong> block and enter an <strong>Option name</strong>, such as &quot;Dog size&quot;. Customers pick a value once, and every card shows that variant's price, image, and days of supply. It changes the variant shown on the cards. It does not filter out products or change the cart.</p>
+<h2 id="filters">Filters</h2>
+<p>Filters come from Shopify's free <strong>Search &amp; Discovery</strong> app:</p>
+<ol><li>Install <strong>Search &amp; Discovery</strong> from the Shopify App Store.</li><li>In the app, open <strong>Filters</strong> and add the filters you want, such as availability, price, product type, variant options (for example &quot;Dog size&quot;), or product metafields (for example a roast level).</li><li>In the theme editor, make sure <strong>Enable filtering</strong> is on in the <strong>Collection</strong> and <strong>Search</strong> sections.</li></ol>
+<p>Customers can combine filters. Active filters show as removable buttons above the products.</p>
+<p>The same app sets up <strong>Complementary products</strong> for the <strong>Product recommendations</strong> section: open <strong>Product recommendations</strong> in the app, choose a product, and add the products that go with it.</p>
+<h2 id="collection-list-page">Collection list page</h2>
+<p>The <strong>Collections grid</strong> section lists your collections.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Collections</strong></td><td>Choose collections and their order. Leave blank to show every collection.</td></tr><tr><td><strong>Columns on desktop</strong></td><td>From 1 to 4. Use 1 for rows that each list a few products.</td></tr><tr><td><strong>Image ratio</strong></td><td><strong>Portrait</strong>, <strong>Square</strong>, or <strong>Landscape</strong>.</td></tr></tbody></table></div>
+<p>Collections without an image use the image of their first product.</p>
+<h2 id="search">Search</h2>
+<p>The <strong>Search</strong> section shows products, then blog posts and pages, with the same filters and sorting as collection pages. Settings: <strong>Products per page</strong>, <strong>Enable filtering</strong>, <strong>Enable sorting</strong>, <strong>Filter layout</strong>, <strong>Card size</strong>, and <strong>Image ratio</strong>. It also accepts a <strong>Variant filter</strong> block.</p>
+<p>Under <strong>No results</strong>:</p>
+<ul><li><strong>Suggested searches</strong>: words to suggest, separated by commas.</li><li><strong>Products for no results</strong>: a collection to show. Leave blank to show every product.</li><li><strong>Collections for no results</strong>: collections to suggest. Leave blank to show the first collections with products.</li></ul>
+<h2 id="cart">Cart</h2>
+<p><strong>Theme settings &gt; Cart &gt; Cart type</strong> chooses between:</p>
+<ul><li><strong>Drawer</strong>: adding a product opens a panel over the current page. Customers can change quantities, remove items, add a note, and check out without leaving the page.</li><li><strong>Page</strong>: adding a product goes to the cart page.</li></ul>
+<p>Both show, for each item: image, title, options, pack size, plan name or &quot;One-time purchase&quot;, days of supply, unit price, discounts, and quantity. Below the items: discounts on the order, subtotal, the tax note, the cart note (turn it off with <strong>Show cart note</strong>), the checkout button, and dynamic checkout buttons.</p>
+<p>When the cart has items on a delivery plan, they are grouped under &quot;On repeat&quot; and the rest under &quot;Once&quot;. The summary shows what customers pay today, and a &quot;Then&quot; note says when each plan item comes again and what it costs.</p>
+<p>Discount codes are entered at checkout. The cart shows automatic discounts and discounts that are already applied.</p>
+<h3 id="cart-page-section">Cart page section</h3>
+<p>In the theme editor, choose <strong>Cart</strong> from the page menu and select the <strong>Cart</strong> section.</p>
+<div class="table"><table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Products for an empty cart</strong></td><td>Products to suggest when the cart is empty.</td></tr><tr><td><strong>Shipping schedule position</strong></td><td>Places the <strong>Shipping schedule</strong> block <strong>Above cart items</strong> or <strong>Below checkout buttons</strong>.</td></tr></tbody></table></div>
+<p>Blocks: <strong>Text</strong> (for shipping or returns notes), <strong>Shipping schedule</strong>, <strong>Custom Liquid</strong>, and app blocks. They show below the checkout buttons.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

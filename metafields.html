@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product metafields — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Product metafields</h1>
+<p>Metafields are extra fields you add to products, such as how many days a product lasts or the date a batch was made. Kalends reads a few product metafields on its own, with no theme editor setup. Every one is optional: when a metafield is empty or missing, the line that uses it is hidden and the rest of the page stays the same.</p>
+<h2 id="metafields-the-theme-reads">Metafields the theme reads</h2>
+<p>Use exactly these namespaces, keys, and types. The theme does not read other names.</p>
+<div class="table"><table><thead><tr><th>Namespace and key</th><th>Type</th><th>Where it shows</th></tr></thead><tbody><tr><td><code>custom.days_of_supply</code></td><td>Integer</td><td>How many days one unit lasts. Product cards (see <strong>Days of supply on product cards</strong>), the product page, <strong>Product list</strong> rows, and cart lines. Also used to suggest the delivery plan that fits best. Can be set on products and on variants.</td></tr><tr><td><code>custom.label_color</code></td><td>Color</td><td>The product's own color. A light tint of it fills the frame behind the product's images on cards, the product page, the cart, and search suggestions.</td></tr><tr><td><code>custom.pack</code></td><td>Single line text</td><td>Pack size, such as &quot;30 scoops · 180 g&quot;. Under the title on the product page, on <strong>Product list</strong> rows, and on cart lines.</td></tr><tr><td><code>custom.subtitle</code></td><td>Single line text</td><td>A short line under the product title, such as &quot;Chicken, oats and pumpkin&quot;. On the product page and in <strong>Featured products</strong> with the <strong>Menu</strong> layout, where it replaces the product type.</td></tr><tr><td><code>custom.time_of_use</code></td><td>Single line text</td><td>A time of day, such as &quot;7:00 am&quot;. In the <strong>Three columns</strong> product layout it replaces the product type in the margin, and it starts the <strong>How to use</strong> block.</td></tr><tr><td><code>custom.how_to_use</code></td><td>Multi-line text</td><td>Directions shown by the <strong>How to use</strong> block.</td></tr><tr><td><code>custom.care</code></td><td>Multi-line text</td><td>Care and storage rows shown by the <strong>How to use</strong> block. Write one row per line, with a name before a colon, such as <code>Once opened: Keep the lid on.</code></td></tr><tr><td><code>custom.made_on</code></td><td>Date</td><td>The date a batch was made, roasted, or baked. Groups products in the <strong>Grouped by date</strong> layouts, shows in the <strong>Made-on date</strong> block when you connect it, and dates rows in the <strong>Collections grid</strong> with one column.</td></tr><tr><td><code>custom.facts</code></td><td>Single line text, list of values</td><td>Short facts, such as &quot;Washed&quot;, &quot;Light roast&quot;, &quot;340 g&quot;. Shown under the title on cards, list rows, and cart lines.</td></tr><tr><td><code>custom.notes</code></td><td>Single line text, list of values</td><td>Tasting or scent notes, such as &quot;Bergamot&quot;, &quot;Apricot&quot;. Shown under the title on the product page, cards, and list rows.</td></tr><tr><td><code>custom.captions</code></td><td>Single line text, list of values</td><td>Captions for the product page images, in the same order as the product's media: the first value is the first image's caption. Images after the last value have no caption.</td></tr></tbody></table></div>
+<h3 id="days-of-supply-on-variants">Days of supply on variants</h3>
+<p>When variants last for different times, such as a 2 kg and a 12 kg bag, create <code>custom.days_of_supply</code> for variants too. A variant's value wins over the product's value, and the product page updates when a customer picks another variant. Products whose variants all last the same time only need the product metafield.</p>
+<p>The number is per unit and does not change with the quantity in the cart.</p>
+<h2 id="create-a-metafield-definition">Create a metafield definition</h2>
+<ol><li>In your Shopify admin, go to <strong>Settings &gt; Custom data</strong>.</li><li>Choose <strong>Products</strong> (or <strong>Variants</strong> for variant values).</li><li>Click <strong>Add definition</strong>.</li><li>Enter a name, such as &quot;Days of supply&quot;. In the namespace and key field, enter the exact value from the table, such as <code>custom.days_of_supply</code>.</li><li>Select the type from the table. For <code>custom.facts</code>, <code>custom.notes</code>, and <code>custom.captions</code>, choose Single line text and then the list of values option.</li><li>Click <strong>Save</strong>.</li></ol>
+<p>Then open a product in <strong>Products</strong> and fill in the value in its metafields area. Values save with the product.</p>
+<h2 id="connect-a-metafield-to-a-block">Connect a metafield to a block</h2>
+<p>Some blocks show different content on each product only when you connect them to a metafield. This is called a dynamic source.</p>
+<ol><li>In the theme editor, open <strong>Products &gt; Default product</strong> and select the block.</li><li>Next to the setting, click the <strong>Connect dynamic source</strong> icon.</li><li>Choose the metafield. The editor only lists metafields whose type fits the setting.</li></ol>
+<p>Useful connections:</p>
+<div class="table"><table><thead><tr><th>Block</th><th>Setting</th><th>Metafield to connect</th></tr></thead><tbody><tr><td><strong>Made-on date</strong></td><td><strong>Date</strong></td><td>A Date metafield, such as <code>custom.made_on</code>. The block stays hidden on products without a date.</td></tr><tr><td><strong>Text</strong></td><td><strong>Text</strong></td><td>A Multi-line text metafield, such as an ingredients list you name <code>custom.ingredients</code>.</td></tr><tr><td><strong>Specifications</strong></td><td><strong>Rows</strong></td><td>A Multi-line text metafield with one row per line, such as <code>Protein: 26%</code>.</td></tr><tr><td><strong>Collapsible row</strong></td><td><strong>Text</strong></td><td>A Multi-line text metafield, such as feeding notes.</td></tr><tr><td><strong>Article</strong> section</td><td><strong>Products in this post</strong></td><td>A blog post metafield of the Product type, with the list option, so each post shows its own products.</td></tr></tbody></table></div>
+<p>Metafields you connect yourself can use any name. Only the metafields in the first table are read by the theme without a connection.</p>
+<h2 id="what-happens-without-metafields">What happens without metafields</h2>
+<ul><li>No <code>custom.days_of_supply</code>: cards, rows, and the product page leave out the ruler or sentence. The plan suggestion on cards uses the first plan the theme can read instead.</li><li>No <code>custom.label_color</code>: image frames use the color scheme's <strong>Selected row</strong> color.</li><li>No <code>custom.made_on</code>: <strong>Grouped by date</strong> layouts group products by product type, and the <strong>Made-on date</strong> block is hidden.</li><li>No <code>custom.facts</code> or <code>custom.notes</code>: cards show the title and price only.</li></ul>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

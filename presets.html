@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choose a preset — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Choose a preset</h1>
+<p>Kalends comes in three presets. They share the same sections, blocks, and settings, so anything you can do in one preset you can do in the others. What changes is the starting point: fonts, colors, corner radius, and how the main pages are laid out.</p>
+<h2 id="at-a-glance">At a glance</h2>
+<div class="table"><table><thead><tr><th></th><th>Kalends</th><th>Kennel</th><th>Soot</th></tr></thead><tbody><tr><td>Made for</td><td>Wellness, tea, and body care brands with a small, scheduled lineup</td><td>Pet food and other products sold in sizes, such as dog size and bag weight</td><td>Coffee roasters and small-batch food brands that date each batch</td></tr><tr><td>Fonts</td><td>Chivo and Petrona</td><td>Besley and Nunito</td><td>Josefin Sans and Alegreya Sans</td></tr><tr><td>Colors</td><td>Light paper, a tint, a dark night scheme, and a yellow accent</td><td>Warm cream, a darker cream, dark brown, and a mustard accent</td><td>Dark background throughout, with an orange date color and a deep green scheme</td></tr><tr><td>Corner radius</td><td>0 px (square)</td><td>6 px</td><td>12 px</td></tr><tr><td>Days of supply on cards</td><td>Ruler</td><td>Sentence</td><td>Hidden</td></tr><tr><td>Product page</td><td>Three columns</td><td>Centered title</td><td>Edge-to-edge image</td></tr><tr><td>Collection page</td><td>Groups in the margin</td><td>Grid, with a variant filter</td><td>Grouped by date</td></tr><tr><td>Header</td><td>Two rows</td><td>One row</td><td>Centered</td></tr></tbody></table></div>
+<h2 id="kalends">Kalends</h2>
+<p>The home page opens with an <strong>Image banner</strong> (Image beside text) that features one product and a <strong>Plan example</strong> of how a delivery plan works. A <strong>Product list</strong> follows, with your products grouped as a price list, then a <strong>Product gallery</strong> and <strong>Blog posts</strong>.</p>
+<p>On the product page (<strong>Three columns</strong>), the product's time of use or product type sits in a narrow margin next to the photos, and a ruler under the price shows how many days the product lasts. Descriptions, text blocks, and collapsible rows run full width below.</p>
+<p>The collection page uses <strong>Groups in the margin</strong>: add <strong>Product group</strong> blocks with a product tag, and each group becomes a band with its heading in the left margin.</p>
+<h2 id="kennel">Kennel</h2>
+<p>The home page opens with a text-only <strong>Image banner</strong>, followed by a <strong>Product gallery</strong>, a <strong>Featured products</strong> section with the <strong>Menu</strong> layout and a <strong>Variant filter</strong> for dog size, an <strong>Image with text</strong>, and <strong>Blog posts</strong> as a list.</p>
+<p>On the product page (<strong>Centered title</strong>), the title and product type are centered above the photos and the buying column. When a product has a &quot;Dog size&quot; option, a band above the options shows the selected size and bag, and each option row shows how many days that size lasts. A <strong>Product details</strong> section with columns holds ingredients, specifications, and care.</p>
+<p>The collection and search pages use a <strong>Variant filter</strong>: customers pick a dog size once, and every card shows that size's price and days of supply.</p>
+<h2 id="soot">Soot</h2>
+<p>The home page opens with an <strong>Image banner</strong> in the <strong>Two pages</strong> layout, followed by a <strong>Product list</strong> with the <strong>Two pages</strong> layout, an <strong>Image with text</strong>, and a <strong>Product gallery</strong>.</p>
+<p>On the product page (<strong>Edge-to-edge image</strong>), the first photo runs to the left edge of the screen. A <strong>Made-on date</strong> block shows the roast date from the <code>custom.made_on</code> metafield, and the <code>custom.notes</code> metafield shows tasting notes under the title.</p>
+<p>The collection page uses <strong>Grouped by date</strong>: products are grouped by their <code>custom.made_on</code> date, newest first. Products without a date are grouped by product type. Blog, article, FAQ, and contact pages put their headings in the left margin.</p>
+<h2 id="switching-presets">Switching presets</h2>
+<p>Presets are styles of the same theme. To try another one, open its listing in the Theme Store and add it to your theme library; it installs as a separate theme with that preset's settings. Your products, collections, and metafields stay the same. Settings you changed in one theme are not copied to the other.</p>
+<p>You can also recreate a preset by hand: every difference above is a setting you can change in the theme editor, such as <strong>Product layout</strong> in the <strong>Product</strong> section or <strong>Layout</strong> in the <strong>Collection</strong> section.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

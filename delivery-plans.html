@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delivery plans and dates — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Delivery plans and dates</h1>
+<p>Kalends shows subscriptions as delivery plans, and turns your shipping days into estimated ship dates. Both are optional. Without plans, products sell as one-time purchases. Without shipping days, no dates appear anywhere.</p>
+<h2 id="delivery-plans">Delivery plans</h2>
+<h3 id="create-plans-in-a-subscriptions-app">Create plans in a subscriptions app</h3>
+<p>Shopify stores subscriptions as selling plans, and only apps can create them. The theme works with any subscriptions app that uses selling plans, such as the free <strong>Shopify Subscriptions</strong> app:</p>
+<ol><li>Install the app from the Shopify App Store.</li><li>Create a plan, for example &quot;Deliver every month, 15% off&quot;, and add products or variants to it.</li><li>Open the product in your store. The plans appear in the <strong>Purchase options</strong> block.</li></ol>
+<p>The theme does not create or change plans, prices, or discounts. Billing, delivery frequency, and customer subscription management stay in the app.</p>
+<h3 id="how-plans-appear-on-the-product-page">How plans appear on the product page</h3>
+<ul><li>&quot;One-time purchase&quot; is listed first and selected when the page loads. If you set a product to sell only on a plan in your app, the one-time option is left out and the first plan is selected.</li><li>Every plan of every plan group is shown, each with its price per delivery. Nothing is hidden behind a dropdown.</li><li>When the selected variant is not part of a plan group, the group stays visible but can't be selected, with the note &quot;Not available for this selection.&quot;</li><li>A link to your subscription policy appears under the plans when you have one in <strong>Settings &gt; Policies</strong>.</li></ul>
+<p>Every plan always shows as its own option, so customers see all frequencies before they choose. When the selected variant has no plans, the plan group is shown as unavailable with the reason under its name.</p>
+<h3 id="plans-elsewhere-in-the-store">Plans elsewhere in the store</h3>
+<ul><li>Product cards and list rows add a short plan price after the regular price, such as &quot;or $35.70 every month&quot;. When the product has <code>custom.days_of_supply</code>, the theme suggests the longest plan that does not outlast the product. A 30-day product suggests a monthly plan, not a two-month plan.</li><li><strong>Image banner</strong> can show a <strong>Plan example</strong> block: one product's plan price and how often it arrives, without calendar dates.</li><li><strong>Cart.</strong> When the cart has an item on a plan, plan items are grouped under &quot;On repeat&quot; and one-time items under &quot;Once&quot;. Each plan item shows its full plan name. A &quot;Then&quot; note says when the next delivery comes and what it costs, such as &quot;comes every month after this one&quot;.</li></ul>
+<h3 id="how-the-theme-reads-a-plan-s-frequency">How the theme reads a plan's frequency</h3>
+<p>The theme reads the frequency from the plan name and its options, such as &quot;Deliver every 2 weeks&quot; or &quot;Monthly&quot;. Apps that name plans this way, including Shopify Subscriptions, need no setup.</p>
+<p>If your plan names don't include the frequency, such as &quot;Subscribe and save&quot;, add a line for each plan in <strong>Theme settings &gt; Delivery dates &gt; Delivery frequencies</strong>:</p>
+<pre><code>Subscribe and save = 1 month
+Pantry plan = 2 weeks</code></pre>
+<p>The text before <code>=</code> must appear in the plan name. After <code>=</code>, write a number and a unit: day, week, month, or year. When the theme can't read a frequency, it still shows the plan, but leaves out the frequency text and later delivery dates.</p>
+<h2 id="ship-dates">Ship dates</h2>
+<h3 id="turn-on-dates">Turn on dates</h3>
+<ol><li>Go to <strong>Theme settings &gt; Delivery dates</strong>.</li><li>Under <strong>Shipping days</strong>, check every day you ship orders.</li><li>Choose your <strong>Same-day cutoff</strong>, in your store's time zone, or <strong>No same-day shipping</strong>.</li><li>Choose a <strong>Shipment name</strong>: <strong>Box</strong>, <strong>Bag</strong>, or <strong>Delivery</strong>.</li></ol>
+<p>Ship dates appear only after you check at least one shipping day.</p>
+<h3 id="dates-are-for-display-only">Dates are for display only</h3>
+<p>The theme calculates dates in the customer's browser from the days and cutoff above. The dates:</p>
+<ul><li>are estimates of when an order leaves, shown with &quot;about&quot;, such as &quot;First box ships about Wed, Oct 14&quot;;</li><li>don't change orders, shipping rates, delivery dates in your subscriptions app, or checkout;</li><li>show only to customers browsing in your store's own country, because your shipping days are for your home warehouse;</li><li>need JavaScript. Without it, customers see the same text without a date, such as &quot;First box ships on our next shipping day.&quot;</li></ul>
+<p>Keep the days and cutoff in line with <strong>Settings &gt; Shipping and delivery</strong> and with your real packing schedule, and update them for holidays.</p>
+<h3 id="where-dates-appear">Where dates appear</h3>
+<div class="table"><table><thead><tr><th>Place</th><th>What it shows</th><th>How to set it up</th></tr></thead><tbody><tr><td>Product page, under the plans</td><td>&quot;Ships about Wed, Oct 14&quot;, or &quot;First box ships about Wed, Oct 14&quot; while a plan is selected, and &quot;Dates are estimates from our shipping days.&quot;</td><td>Automatic once shipping days are set. Shown when a product has plans.</td></tr><tr><td><strong>Delivery dates</strong> block</td><td>The first shipment's date, then the next two relative to it, such as &quot;about 2 weeks later&quot;, while a plan is selected.</td><td>Add the block to the <strong>Product</strong> section. Settings: <strong>Heading</strong>, <strong>Text</strong>, <strong>Image</strong>, <strong>Color scheme</strong>.</td></tr><tr><td><strong>Shipping schedule</strong> block</td><td>&quot;Ships Monday to Friday. Orders placed by 2:00 pm ship the same day.&quot; With <strong>Show next ship date</strong>, also &quot;Orders placed now ship about Wed, Oct 14.&quot;</td><td>Add the block to the <strong>Footer</strong>, <strong>Cart</strong>, <strong>Image banner</strong>, or <strong>Image with text</strong> section. Settings: <strong>Heading</strong>, <strong>Link label</strong>, <strong>Link</strong>, <strong>Show shipping days</strong>, <strong>Show next ship date</strong>.</td></tr><tr><td>Header</td><td>&quot;First box ships about Oct 14&quot;, linking to the cart summary.</td><td>Automatic when the cart has an item on a plan.</td></tr></tbody></table></div>
+<p>Later deliveries are always shown relative to the first one, never as calendar dates, because your subscriptions app decides the exact dates.</p>
+<p>In the <strong>Cart</strong> section, <strong>Shipping schedule position</strong> places the block <strong>Above cart items</strong> or <strong>Below checkout buttons</strong>.</p>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>

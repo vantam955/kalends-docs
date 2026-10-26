@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started with Kalends — Kalends</title>
+<style>
+:root { color-scheme: light; --text: #111; --muted: #555; --rule: #d4d4d4; --accent: #2340c8; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header, main, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; align-items: center; padding-block: 1rem; border-bottom: 3px solid var(--text); }
+header a { font-weight: 700; }
+main { padding-block: 1.5rem 3rem; overflow-wrap: break-word; }
+footer { padding-block: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+code { font: 0.875em/1.4 ui-monospace, Consolas, monospace; background: #f2f2f2; padding: 0.1em 0.3em; overflow-wrap: anywhere; }
+pre { background: #f2f2f2; padding: 0.75rem; overflow-x: auto; }
+pre code { padding: 0; }
+.table { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem; border-bottom: 1px solid var(--rule); min-width: 7rem; }
+li + li { margin-top: 0.35rem; }
+.toc li { margin-top: 0.5rem; }
+.toc span { display: block; color: var(--muted); font-size: 0.9375rem; }
+</style>
+</head>
+<body>
+<header><a href="index.html">Kalends documentation</a><a href="https://tally.so/r/7RBRj0?theme_name=Kalends">Support</a></header>
+<main>
+<h1>Getting started with Kalends</h1>
+<p>Kalends is built for brands with a small lineup that customers buy again and again: tea, coffee, body care refills, pet food. Product pages are organized around how long a product lasts and when the next delivery leaves. This guide takes you from installation to a store that looks like the demo.</p>
+<h2 id="1-install-and-publish">1. Install and publish</h2>
+<ol><li>In the Shopify Theme Store, open the preset you want and click <strong>Try theme</strong> or <strong>Buy theme</strong>. See <a href="presets.html">Choose a preset</a> for the differences between Kalends, Kennel, and Soot.</li><li>In your Shopify admin, go to <strong>Online Store &gt; Themes</strong>. The theme appears in your theme library.</li><li>Click <strong>Customize</strong> to open the theme editor. Make your changes, then click <strong>Publish</strong> when you are ready.</li></ol>
+<p>The preset's layout, colors, and fonts come with the theme. Demo products, images, and text do not, so the first preview uses your own products. Sections that need content you have not added yet show a short hint in the theme editor and stay hidden in your store.</p>
+<h2 id="2-set-up-your-products">2. Set up your products</h2>
+<p>The theme works with any catalog, but it is designed for 2–10 products. For each product:</p>
+<ul><li><strong>Add product details.</strong> Title, description, images (with alt text), price, and variants work as in any theme. To show captions under product page images, use the <code>custom.captions</code> metafield.</li><li><strong>Add how long it lasts (recommended).</strong> Create the <code>custom.days_of_supply</code> metafield (Integer) and enter the number of days one unit lasts. Cards, the product page, and the cart use it. See <a href="metafields.html">Product metafields</a>.</li><li><strong>Add delivery plans (optional).</strong> Install a subscriptions app such as <strong>Shopify Subscriptions</strong> and add products to a plan. The product page lists every plan, with &quot;One-time purchase&quot; selected by default. See <a href="delivery-plans.html">Delivery plans and dates</a>.</li><li><strong>Add more details (optional).</strong> Metafields such as <code>custom.pack</code> (&quot;30 scoops · 180 g&quot;), <code>custom.subtitle</code>, <code>custom.made_on</code>, and <code>custom.notes</code> add lines to cards and product pages. Every one of them is optional: when it is empty, the line is hidden.</li></ul>
+<h2 id="3-enter-your-shipping-days">3. Enter your shipping days</h2>
+<p>Go to <strong>Theme settings &gt; Delivery dates</strong>, check the days you ship orders, and choose your <strong>Same-day cutoff</strong>. The theme then shows lines such as &quot;Ships Monday to Friday. Orders placed by 2:00 pm ship the same day.&quot; and &quot;First box ships about Wed, Oct 14&quot;.</p>
+<p>These dates are for display only. They are estimates calculated from the days you enter here, and they do not change orders, shipping rates, or checkout. Match them to your shipping settings in <strong>Settings &gt; Shipping and delivery</strong>. See <a href="delivery-plans.html">Delivery plans and dates</a>.</p>
+<h2 id="4-choose-colors-and-fonts">4. Choose colors and fonts</h2>
+<p>Go to <strong>Theme settings</strong>:</p>
+<ul><li><strong>Colors.</strong> Each preset comes with four color schemes, and you can edit them or add more. Each section has a <strong>Color scheme</strong> setting, so changing a scheme updates every section that uses it. See <a href="theme-settings.html">Theme settings</a>.</li><li><strong>Typography.</strong> Pick a <strong>Heading font</strong> and a <strong>Body font</strong>, and choose whether navigation, buttons, and prices use the heading or the body font.</li><li><strong>Style.</strong> Set the <strong>Corner radius</strong> and how <strong>Days of supply on product cards</strong> appear.</li></ul>
+<h2 id="5-build-your-home-page">5. Build your home page</h2>
+<p>Each preset comes with its own home page. You can keep it, reorder sections, or add others from the section picker. The sections are described in <a href="sections.html">Home page sections</a>. Most sections fill themselves with your products and collections until you choose specific ones.</p>
+<h2 id="6-menus-header-and-footer">6. Menus, header, and footer</h2>
+<ul><li><strong>Header.</strong> Choose the <strong>Menu</strong> (Main menu by default) and the <strong>Customer account menu</strong>. Upload a logo in <strong>Theme settings &gt; Logo</strong>, or keep your store name. See <a href="header-footer.html">Header and footer</a>.</li><li><strong>Footer.</strong> Add blocks for email signup, menus, text, and your shipping schedule. Add social media links in <strong>Theme settings &gt; Social media</strong>.</li></ul>
+<h2 id="7-before-you-launch">7. Before you launch</h2>
+<ul><li>Add a favicon in <strong>Theme settings &gt; Logo &gt; Favicon</strong> (32 x 32px .png recommended).</li><li>Set up filters in the <strong>Search &amp; Discovery</strong> app. See <a href="collections-cart.html">Collections, search, and cart</a>.</li><li>Create a contact page: add a page and choose the <code>contact</code> template in <strong>Theme template</strong>. See <a href="blog-pages.html">Blog, pages, and other templates</a>.</li><li>Preview the store on your phone and check your images and text.</li></ul>
+</main>
+<footer>Need help? Contact us through the <a href="https://tally.so/r/7RBRj0?theme_name=Kalends">support form</a>. We reply within two business days.</footer>
+</body>
+</html>
